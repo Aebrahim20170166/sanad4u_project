@@ -69,7 +69,8 @@ session_start();
                                                     <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>
                                                     <li><a href="user-statements.html"><i class="icon-text-document"></i> Statement</a></li>
                                                     <li class="active"><a href="user-account-setting.html"><i class="icon-gear"></i> Profile Setting</a></li>
-                                                    <li><a href="{{route('logout')}}"><i class="icon-log-out"></i> Logout</a></li>
+                                                    <li><a href="{{route('logout')}}
+"><i class="icon-log-out"></i> Logout</a></li>
                                                 </ul>
                                             </div>
                                         </li>
@@ -93,9 +94,9 @@ session_start();
                                                         <div class="cs-media">
                                                             <figure><img alt="" src="{{asset('assets/extra-images/user-login-img-1.jpg')}}"></figure>
                                                         </div>
-                                                        <a href="#">Alard William</a>
+                                                        <a href="{{url('student')}}">Alard William</a>
                                                         <ul>
-                                                            <li><a href="user-detail.html"><i class="icon-user3"></i> About me</a></li>
+                                                            <li><a href="{{url('student')}}"><i class="icon-user3"></i> About me</a></li>
                                                             <li><a href="user-courses.html"><i class="icon-graduation-cap"></i> My Groups</a></li>
                                                             <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>
                                                             <li><a href="user-statements.html"><i class="icon-text-document"></i> Statement</a></li>

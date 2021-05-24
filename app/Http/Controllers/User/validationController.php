@@ -34,11 +34,13 @@ class validationController extends Controller
         if (Hash::check($request->password, $userData->password)) {
             //$request->session()->put('username',$request->usernme);
             session(['username' => $request->username]);
+            session(['email' => $userData->email]);
+            session(['phone_number' => $userData->phone_number]);
             return redirect()->route('home');
             //return redirect('success');
         }
         else{
-            return redirect()->back()->with(['error'=>'ID or Password is invalid']);
+            return redirect()->back()->with(['error'=>'username or Password is invalid']);
         }
     }
 }

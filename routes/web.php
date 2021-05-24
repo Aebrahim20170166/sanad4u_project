@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\userRegistration;
 use App\Http\Controllers\User\validationController;
+use App\Http\Controllers\Student;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,22 @@ Route::view('success','success')->name('success');
 Route::view('home','welcome')->name('home');
 Route::post('createAccount',[userRegistration::class,'handle_signup'])->name("createAccount");
 Route::post('validate',[validationController::class,'checkLogin_data_and_login'])->name("validate");
-//logout
+
+
+//checkLogin_data_and_login
+
+
+// logout
+
 Route::get('/logout', function () {
     Session::flush();
     return redirect()->route('home');
 })->name('logout');
-//checkLogin_data_and_login
+
+// student 
+
+ Route::get('/student' , [Student::class , 'index']);
+ Route::get('/student/Groups' , [Student::class , 'group']);
+ Route::get('/student/Favorites' , [Student::class , 'favorite']);
+ Route::get('/student/Setting' , [Student::class , 'setting']);
+ Route::get('/student/Statement' , [Student::class , 'statement']);
