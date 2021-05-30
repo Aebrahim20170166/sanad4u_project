@@ -11,22 +11,21 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Instructor Account Setting Page</title>
-<link href="{{ asset('assets/css/bootstrap.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/bootstrap-theme.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/iconmoon.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/chosen.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/jquery.mobile-menu.css ')}}" rel="stylesheet">
-<link href="{{ asset('style/style.css" rel="stylesheet ')}}">
-<link href="{{ asset('plugins/cs-smartstudy-plugin.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/color.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/widget.css ')}}" rel="stylesheet">
-<link href="{{ asset('assets/css/responsive.css ')}}" rel="stylesheet">
+<link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/bootstrap-theme.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/iconmoon.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/chosen.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/jquery.mobile-menu.css')}}" rel="stylesheet">
+<link href="{{asset('style/style.css')}}" rel="stylesheet">
+<link href="{{asset('plugins/cs-smartstudy-plugin.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/color.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/widget.css')}}" rel="stylesheet">
+<link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
 
-<script src="{{ asset('assets/scripts/jquery.js' ) }}"></script>
-<script src="{{ asset('assets/scripts/modernizr.js' ) }}"></script>
-<script src="{{ asset('assets/scripts/bootstrap.min.js' ) }}"></script>
+@yield('style')
+
 </head>
-<body class="wp-smartstudy">{{ asset ( '
+<body class="wp-smartstudy">
 <div class="wrapper"> 
 		<!-- Side Menu Start -->
 	<div id="overlay"></div>
@@ -483,7 +482,7 @@ session_start();
 
 
 
-    @yield('main')
+@yield('main')
 
 
 
@@ -617,11 +616,17 @@ session_start();
 	</footer>
 	<!-- Footer End --> 
 </div>
-<script src="{{ asset ( 'assets/scripts/responsive.menu.js' ) }}"></script> 
-<script src="{{ asset ( 'assets/scripts/chosen.select.js' ) }}"></script> 
-<script src="{{ asset ( 'assets/scripts/slick.js' ) }}"></script> 
-<script src="{{ asset ( 'assets/scripts/jquery.mobile-menu.min.js' ) }}"></script>
-<!-- Put all Functions in functions.js --> 
-<script src="{{ asset ( 'assets/scripts/functions.js' ) }}"></script>
+<script src="{{asset('assets/scripts/jquery.js')}}"></script>
+<script src="{{asset('assets/scripts/modernizr.js')}}"></script>
+<script src="{{asset('assets/scripts/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/scripts/responsive.menu.js')}}"></script> <!-- Slick Nav js -->
+<script src="{{asset('assets/scripts/chosen.select.js')}}"></script> <!-- Chosen js -->
+<script src="{{asset('assets/scripts/slick.js')}}"></script> <!-- Slick Slider js -->
+<script src="{{asset('assets/scripts/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script src="{{asset('assets/scripts/jquery.mobile-menu.min.js')}}"></script><!-- Side Menu js -->
+<script src="{{asset('assets/scripts/counter.js')}}"></script><!-- Counter js -->
+@yield('js')
+<!-- Put all Functions in functions.js -->
+<script src="{{asset('assets/scripts/functions.js')}}"></script>
 </body>
 </html>
