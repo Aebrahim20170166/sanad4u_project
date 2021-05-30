@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\userRegistration;
 use App\Http\Controllers\User\validationController;
 use App\Http\Controllers\Student;
+use App\Http\Controllers\Teacher;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,10 @@ Route::get('/logout', function () {
  Route::get('/student/Favorites' , [Student::class , 'favorite']);
  Route::get('/student/Setting' , [Student::class , 'setting']);
  Route::get('/student/Statement' , [Student::class , 'statement']);
+
+
+// teacher
+
+Route::get('/teacher' , [Teacher::class , 'index']);
+Route::get('/teacher/settings' , [Teacher::class , 'settings']);
+Route::get('/teacher/courses' , [Teacher::class , 'courses']);

@@ -11,11 +11,6 @@ class Student extends Controller
     public function index()
     {
         return view('student.user-detail');
-
-
-        $data['user'] = StudentModel::get();
-
-        return view('student.user-detail')->with($data);
     }
 
     public function group()
@@ -35,4 +30,6 @@ class Student extends Controller
     {
         return view('student.Setting');
     }
+
+
 }

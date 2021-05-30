@@ -30,7 +30,7 @@
 									<li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
 									<li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
 								</ul>
-								<a href="#" class="cs-logout"><i class="icon-log-out cs-color"></i>Logout</a> </div>
+								<a href="{{route('logout')}}" class="cs-logout"><i class="icon-log-out cs-color"></i>Logout</a> </div>
 						</div>
 					</div>
 					<div class="page-content col-lg-8 col-md-8 col-sm-12 col-xs-12">

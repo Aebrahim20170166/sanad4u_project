@@ -19,8 +19,6 @@ session_start();
 <link href="{{ asset('assets/css/widget.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
 
-
-
 @yield('style')
 </head>
 <body class="wp-smartstudy">
@@ -155,15 +153,15 @@ session_start();
                                         <div class="cs-media">
                                             <figure><img alt="" src="{{ asset('assets/extra-images/user-login-img-1.jpg') }}"></figure>
                                         </div>
-                                        <a href="#">Alard William</a>
+                                        <a href="#">{{ session('username') }}</a>
                                         <ul>
-                                            <li><a href="user-detail.html"><i class="icon-user3"></i> About me</a></li>
-                                            <li><a href="user-courses.html"><i class="icon-graduation-cap"></i> My Groups</a></li>
-                                            <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>
-                                            <li><a href="user-statements.html"><i class="icon-text-document"></i> Statement</a></li>
-                                            <li class="active"><a href="user-account-setting.html"><i class="icon-gear"></i> Profile Setting</a></li>
-                                            <li><a href="#"><i class="icon-log-out"></i> Logout</a></li>
-                                        </ul>
+									<li class="active"><a href="{{ url('student') }}"><i class="icon-user3 cs-color"></i>About me</a></li>
+									<li><a href="{{ url('student/Groups') }}"><i class="icon-graduation-cap cs-color"></i>My Groups</a></li>
+									<li><a href="{{ url('student/Favorites') }}"><i class="icon-heart2 cs-color"></i>Favorites</a></li>
+									<li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
+									<li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
+                                    <li><a href="{{route('logout')}}" class="cs-logout"><i class="icon-log-out cs-color"></i>Logout</a></li>
+								</ul>
                                     </div>
                                 </li>
                             </ul>
