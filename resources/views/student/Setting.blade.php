@@ -1,4 +1,4 @@
-@extends('layoutdashboard');
+@extends('layout');
 
 @section('main')
 

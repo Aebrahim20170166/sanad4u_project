@@ -1,6 +1,6 @@
 
 
-@extends('layoutteacher')
+@extends('layout')
 
 
 @section('main')
