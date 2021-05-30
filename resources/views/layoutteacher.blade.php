@@ -1,28 +1,33 @@
 <?php
+
 session_start();
-?>	
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>User Detail Page</title>
-<link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/bootstrap-theme.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/iconmoon.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/chosen.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/jquery.mobile-menu.css') }}" rel="stylesheet">
-<link href="{{ asset('style/style.css') }}" rel="stylesheet">
-<link href="{{ asset('plugins/cs-smartstudy-plugin.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/color.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/widget.css') }}" rel="stylesheet">
-<link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet">
+<title>Instructor Account Setting Page</title>
+    <link href="{{asset('assets/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/bootstrap-theme.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/iconmoon.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/chosen.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/jquery.mobile-menu.css')}}" rel="stylesheet">
+    <link href="{{asset('style/style.css')}}" rel="stylesheet">
+    <link href="{{asset('plugins/cs-smartstudy-plugin.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/color.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/widget.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/css/responsive.css')}}" rel="stylesheet">
 
-@yield('style')
+<script src="{{ asset('assets/scripts/jquery.js' ) }}"></script>
+<script src="{{ asset('assets/scripts/modernizr.js' ) }}"></script>
+<script src="{{ asset('assets/scripts/bootstrap.min.js' ) }}"></script>
 </head>
 <body class="wp-smartstudy">
-<div class="wrapper"> 
+<div class="wrapper">
 		<!-- Side Menu Start -->
 	<div id="overlay"></div>
     <div id="mobile-menu">
@@ -40,12 +45,12 @@ session_start();
                 </div>
             </li>
             <li><a href="index-2.html">Home</a></li>
-			<li><a href="#">Groups</a>
+			<li><a href="#">Courses</a>
 				<ul>
-					<li><a href="courses-grid.html">Groups grid view</a></li>
-					<li><a href="courses-simple.html">Groups Simple view</a></li>
-					<li><a href="courses-listing.html">Groups list view</a></li>
-					<li><a href="cs-courses-detail.html">Groups Detail</a></li>
+					<li><a href="courses-grid.html">Courses grid view</a></li>
+					<li><a href="courses-simple.html">Courses Simple view</a></li>
+					<li><a href="courses-listing.html">Courses list view</a></li>
+					<li><a href="cs-courses-detail.html">Courses Detail</a></li>
 				</ul>
 			</li>
 			<li class="active"><a href="about-us.html">Pages</a>
@@ -60,7 +65,7 @@ session_start();
 						</ul>
 					</li>
 					<li><a href="about-us.html">About Us</a></li>
-					<li><a href="faqs.html">FAQ's</a></li>
+					<li><a href="faqs.html">FAQs</a></li>
 					<li><a href="under-construction.html">Maintenance Page</a></li>
 					<li><a href="404.html">404 Page</a></li>
 					<li><a href="signup.html">Signup / Login</a></li>
@@ -72,7 +77,7 @@ session_start();
 							<li><a href="team-detail.html"> Team Detail</a></li>
 						</ul>
 					</li>
-					
+
 					<li><a href="#">Shop</a>
 						<ul>
 							<li><a href="shop.html"> Products</a></li>
@@ -103,70 +108,43 @@ session_start();
 					<li><a href="contact-us-02.html">Contact us 2</a></li>
 				</ul>
 			</li>
-            
+
         </ul>
-    </div>
-	<!-- Side Menu Start -->
-	<div id="overlay"></div>
-    <div id="mobile-menu">
-        <ul>
-            <li>
-                <div class="mm-search">
-                    <form id="search" name="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control simple" placeholder="Search ..." name="srch-term" id="srch-term">
-					   <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="icon-search"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </li>
-            <li class="active"><a href="index-2.html">Home</a></li>
-			<li><a href="#">Groups</a></li>
-			<li><a href="#">Events</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Contact</a></li>
-        </ul>
-        
     </div>
 	<!-- Side Menu End -->
 	<!-- Header Start -->
-	<header id="header" class=""> 
+	<header id="header" class="">
 		<div class="top-bar">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <ul class="top-nav nav-left">
                             <li><a href="#">Students</a></li>
-                             <li><a href="#">Trainers</a></li>
-
+                            <li><a href="#">Faculty &amp; Staff</a></li>
+                            <li><a href="#">Parents</a></li>
+                            <li><a href="#">Alumni</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     	<div class="cs-user">
                             <ul>
-                                <li><a data-target="#cs-login" href="login.html" data-toggle="modal"><i class="icon-login"></i>Login</a></li>
-                                <li><a data-target="#cs-signup" href="signup.html"s data-toggle="modal"><i class="icon-user2"></i>Signup</a></li>
                                 <li>
                                     <div class="cs-user-login">
                                         <div class="cs-media">
-                                            <figure><img alt="" src="{{ asset('assets/extra-images/user-login-img-1.jpg') }}"></figure>
+                                            <figure><img alt="" src="assets/extra-images/user-login-img-1.jpg"></figure>
                                         </div>
-                                        <a href="#">{{ session('username') }}</a>
+                                        <a href="#">Alard William</a>
                                         <ul>
-									<li class="active"><a href="{{ url('student') }}"><i class="icon-user3 cs-color"></i>About me</a></li>
-									<li><a href="{{ url('student/Groups') }}"><i class="icon-graduation-cap cs-color"></i>My Groups</a></li>
-									<li><a href="{{ url('student/Favorites') }}"><i class="icon-heart2 cs-color"></i>Favorites</a></li>
-									<li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
-									<li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
-                                    <li><a href="{{route('logout')}}" class="cs-logout"><i class="icon-log-out cs-color"></i>Logout</a></li>
-								</ul>
+                                            <li><a href="user-detail.html"><i class="icon-user3"></i> About me</a></li>
+                                            <li class="active"><a href="user-courses.html"><i class="icon-graduation-cap"></i> My Courses</a></li>
+                                            <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>d
+                                            <li><a href="user-account-setting.html"><i class="icon-gear"></i> Profile Setting</a></li>
+                                            <li><a href="#"><i class="icon-log-out"></i> Logout</a></li>
+                                        </ul>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <!--signup and login form-->
                         <div class="cs-modal">
                             <div class="modal fade" id="cs-signup" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
@@ -206,14 +184,13 @@ session_start();
                                                     <input type="password" id="cs-confirm-password" placeholder="******">
                                                 </label>
                                             </div>
-                                            
+
                                             <div class="input-holder">
                                                 <input class="cs-color csborder-color" type="submit" value="Create Account">
                                             </div>
                                         </form>
                                             </div>
                                         </div>
-                                        
                                         <div class="modal-footer">
                                             <a data-dismiss="modal" data-target="#cs-login" data-toggle="modal" href="javascript:;" aria-hidden="true">Already have account</a>
                                             <div class="cs-separator"><span>or</span></div>
@@ -228,7 +205,7 @@ session_start();
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="modal fade" id="cs-login" tabindex="-1" role="dialog">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -313,9 +290,13 @@ session_start();
                                         </div>
                                     </div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                        <!--end of form-->
+                        <ul class="top-nav nav-right">
+                            <li><a href="#">APPLY</a></li>
+                            <li><a href="#">PROGRAMS &amp; DEGREES</a></li>
+                            <li><a href="#">FIND FUNDINg</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -340,21 +321,75 @@ session_start();
                             <nav class="main-navigation">
                                 <ul>
                                     <li><a href="index-2.html">Home</a><span>About College</span></li>
-                                    <li class="menu-item-has-children"><a href="#">Groups</a>
+                                    <li class="menu-item-has-children"><a href="#">Courses</a>
                                         <span>Online Education</span>
+                                        <ul>
+                                            <li><a href="courses-grid.html">Courses grid view</a></li>
+                                            <li><a href="courses-simple.html">Courses Simple view</a></li>
+                                            <li><a href="courses-listing.html">Courses list view</a></li>
+                                            <li><a href="cs-courses-detail.html">Courses Detail</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">Pages</a><span>All you need</span>
+                                    	<ul>
+                                            <li><a href="user-detail.html">Student Dashboard</a></li>
+                                            <li><a href="instructor-detail.html">instructor Dashboard</a></li>
+								    <li><a href="affiliations.html">Affiliations</a></li>
+                                        	<li><a href="typography.html">Typography</a></li>
+                                            <li class="menu-item-has-children"><a href="shortcode.html">Short code</a>
+												<ul>
+													<li><a href="loop.html">Loop</a></li>
+												</ul>
+											</li>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="faqs.html">FAQs</a></li>
+                                            <li><a href="under-construction.html">Maintenance Page</a></li>
+                                            <li><a href="404.html">404 Page</a></li>
+                                            <li><a href="signup.html">Signup / Login</a></li>
+                                            <li><a href="pricing.html">Price Table</a></li>
+                                        	<li class="menu-item-has-children"><a href="#">Team</a>
+                                            	<ul>
+                                                    <li><a href="team-listing.html"> Team List</a></li>
+                                                    <li><a href="team-grid.html"> Team Grid</a></li>
+                                                    <li><a href="team-detail.html"> Team Detail</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="menu-item-has-children"><a href="#">Shop</a>
+                                            	<ul>
+                                                    <li><a href="shop.html"> Products</a></li>
+                                                    <li><a href="shop-detail.html"> Detail</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item-has-children"><a href="#">Events</a><span>University Events</span>
+                                    	<ul>
+                                        	<li><a href="events-grid.html">Grid View</a></li>
+                                            <li><a href="events-listing.html">List View</a></li>
+                                            <li><a href="events-detail.html">Detail</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item-has-children"><a href="#">Blog</a><span>Learning Objectives</span>
-
+                                    	<ul>
+                                        	<li><a href="blog-medium.html">Medium List</a></li>
+                                            <li><a href="blog-large.html">Large List</a></li>
+                                             <li><a href="blog-grid.html">Grid</a></li>
+                                            <li><a href="blog-detail.html">Detail</a></li>
+											<li><a href="blog-2.html">Masonry</a></li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item-has-children"><a href="#">Contact</a><span>inquire with us</span>
+                                    	<ul>
+                                            <li><a href="contact-us.html">Contact us 1</a></li>
+                                            <li><a href="contact-us-02.html">Contact us 2</a></li>
+                                        </ul>
                                     </li>
                                     <li class="cs-search-area">
                                         <div class="cs-menu-slide">
                                             <div class="mm-toggle">
                                                 <i class="icon-align-justify"></i>
-                                            </div>            
+                                            </div>
                                         </div>
                                         <div class="search-area">
                                             <a href="#"><i class="icon-search2"></i></a>
@@ -372,12 +407,11 @@ session_start();
                                     </li>
                                 </ul>
                             </nav>
-                            
                             <div class="cs-search-area hidden-md hidden-lg">
                                 <div class="cs-menu-slide">
                                     <div class="mm-toggle">
                                         <i class="icon-align-justify"></i>
-                                    </div>            
+                                    </div>
                                 </div>
                                 <div class="search-area">
                                     <a href="#"><i class="icon-search2"></i></a>
@@ -399,11 +433,64 @@ session_start();
 			</div>
 		</div>
 	</header>
-	<!-- Header End --> 
+	<!-- Header End -->
+	<!-- Sub Header Start -->
+	<div class="page-section" style="background:#ebebeb; padding:50px 0 35px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="cs-page-title">
+						<h1>Pamela Fryman</h1>
+						<p style="color:#aaa;">650+ video-based courses and short courses to help you develop creative and technical skills.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Sub Header End -->
+	<!-- Breadcrumb Start -->
+	<div class="page-section" style="border-bottom:1px solid #f4f4f4; margin-bottom:-40px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<ul class="cs-breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Academic</a></li>
+						<li><a href="#">Departments & Programs</a></li>
+						<li>Available Majors</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcrumb End -->
+	<!-- Breadcrumb Start -->
+	<div class="page-section" style="border-bottom:1px solid #f4f4f4; margin-bottom:-40px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<ul class="cs-breadcrumb">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Academic</a></li>
+						<li><a href="#">Departments & Programs</a></li>
+						<li>Available Majors</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Breadcrumb End -->
 
-@yield('main')
+
+
+    @yield('main')
+
+
+
+
+
 	<!-- Footer Start -->
-	<footer id="footer"> 
+	<footer id="footer">
 		<div class="cs-footer-widgets">
             <div class="container">
                 <div class="row">
@@ -427,7 +514,7 @@ session_start();
                                 	<i class="icon-pin"></i>
                                     <p>08:00 to 07:40</p>
                                 </li>
-                            </ul>	
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -440,7 +527,7 @@ session_start();
                                 <li><a href="#">Greenwich VIP</a></li>
                                 <li><a href="#">IT & library services</a></li>
                                 <li><a href="#">Greenwich Connect</a></li>
-                            </ul>	
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -453,7 +540,7 @@ session_start();
                                 <li><a href="#">Legal information</a></li>
                                 <li><a href="#">Terms & conditions</a></li>
                                 <li><a href="#">Copyright</a></li>
-                            </ul>	
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -487,18 +574,19 @@ session_start();
                                         <a href="index-2.html"><img src="assets/images/footer-logo.png" alt="" /></a>
                                     </figure>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="footer-nav">
                             	<ul>
                                 	<li><a href="#">About</a></li>
                                     <li><a href="#">Careers</a></li>
                                     <li><a href="#">Blog</a></li>
+                                    <li><a href="#">Affiliate Program</a></li>
                                     <li><a href="#">Terms</a></li>
                                     <li><a href="#">Privacy</a></li>
                                     <li><a href="#">Press Kit</a></li>
                                     <li><a href="#">Contact</a></li>
                                 </ul>
-                            </div>                       
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -509,7 +597,7 @@ session_start();
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div class="copyright-text">
-                            <p>Sanad Group<a class="cs-color" href="#"> Sanad Group</a></p>
+                            <p>© 2016 SmartStudy :  Best WordPress Theme Ever. All Rights Reserved.<a class="cs-color" href="#"> Chimp Group</a></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -526,19 +614,14 @@ session_start();
                 </div>
             </div>
         </div>
-        
-        
 	</footer>
-	<!-- Footer End --> 
+	<!-- Footer End -->
 </div>
-<script src="{{ asset('assets/scripts/responsive.menu.js') }}"></script> 
-<script src="{{ asset('assets/scripts/chosen.select.js') }}"></script> 
-<script src="{{ asset('assets/scripts/slick.js') }}"></script> 
-<script src="{{ asset('assets/scripts/jquery.mobile-menu.min.js') }}"></script>
-<!-- Put all Functions in functions.js --> 
-<script src="{{ asset('assets/scripts/functions.js') }}"></script>
-
-
+<script src="{{ asset ( 'assets/scripts/responsive.menu.js' ) }}"></script>
+<script src="{{ asset ( 'assets/scripts/chosen.select.js' ) }}"></script>
+<script src="{{ asset ( 'assets/scripts/slick.js' ) }}"></script>
+<script src="{{ asset ( 'assets/scripts/jquery.mobile-menu.min.js' ) }}"></script>
+<!-- Put all Functions in functions.js -->
+<script src="{{ asset ( 'assets/scripts/functions.js' ) }}"></script>
 </body>
-
 </html>

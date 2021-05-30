@@ -64,11 +64,12 @@ session_start();
                                                 </div>
                                                 <a href="#">{{session('username')}}</a>
                                                 <ul>
-                                                    <li><a href="user-detail.html"><i class="icon-user3"></i> About me</a></li>
-                                                    <li><a href="user-courses.html"><i class="icon-graduation-cap"></i> My Groups</a></li>
-                                                    <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>
-                                                    <li><a href="user-statements.html"><i class="icon-text-document"></i> Statement</a></li>
-                                                    <li class="active"><a href="user-account-setting.html"><i class="icon-gear"></i> Profile Setting</a></li>
+									<li class="active"><a href="{{ url('student') }}"><i class="icon-user3 cs-color"></i>About me</a></li>
+									<li><a href="{{ url('student/Groups') }}"><i class="icon-graduation-cap cs-color"></i>My Groups</a></li>
+									<li><a href="{{ url('student/Favorites') }}"><i class="icon-heart2 cs-color"></i>Favorites</a></li>
+									<li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
+									<li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
+								
                                                     <li><a href="{{route('logout')}}
 "><i class="icon-log-out"></i> Logout</a></li>
                                                 </ul>
@@ -96,13 +97,12 @@ session_start();
                                                         </div>
                                                         <a href="{{url('student')}}">Alard William</a>
                                                         <ul>
-                                                            <li><a href="{{url('student')}}"><i class="icon-user3"></i> About me</a></li>
-                                                            <li><a href="user-courses.html"><i class="icon-graduation-cap"></i> My Groups</a></li>
-                                                            <li><a href="user-short-listed.html"><i class="icon-heart"></i> Favorites</a></li>
-                                                            <li><a href="user-statements.html"><i class="icon-text-document"></i> Statement</a></li>
-                                                            <li class="active"><a href="user-account-setting.html"><i class="icon-gear"></i> Profile Setting</a></li>
-                                                            <li><a href="#"><i class="icon-log-out"></i> Logout</a></li>
-                                                        </ul>
+									<li class="active"><a href="{{ url('student') }}"><i class="icon-user3 cs-color"></i>About me</a></li>
+									<li><a href="{{ url('student/Groups') }}"><i class="icon-graduation-cap cs-color"></i>My Groups</a></li>
+									<li><a href="{{ url('student/Favorites') }}"><i class="icon-heart2 cs-color"></i>Favorites</a></li>
+									<li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
+									<li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
+								</ul>
                                                     </div>
                                                 </li>
                                             </ul>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\userRegistration;
 use App\Http\Controllers\User\validationController;
 use App\Http\Controllers\Student;
+use App\Http\Controllers\Teacher\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,10 +36,17 @@ Route::get('/logout', function () {
     return redirect()->route('home');
 })->name('logout');
 
-// student 
+// student
 
  Route::get('/student' , [Student::class , 'index']);
  Route::get('/student/Groups' , [Student::class , 'group']);
  Route::get('/student/Favorites' , [Student::class , 'favorite']);
  Route::get('/student/Setting' , [Student::class , 'setting']);
  Route::get('/student/Statement' , [Student::class , 'statement']);
+
+
+// teacher
+
+Route::get('/teacher' , [TeacherController::class , 'index']);
+Route::get('/teacher/settings' , [TeacherController::class , 'settings']);
+Route::get('/teacher/courses' , [TeacherController::class , 'courses']);
