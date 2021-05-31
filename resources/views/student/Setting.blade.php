@@ -47,7 +47,7 @@
 									</div>
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 										<div class="cs-field">
-											<input name="name" type="text" placeholder="" >
+											<input name="name" type="text" placeholder="" value="{{ session('username') }}" >
 										</div>
 									</div>
 								</div>
@@ -57,42 +57,24 @@
 									</div>
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 										<div class="cs-field">
-											<input name="name" type="text" placeholder="" >
+											<input name="email" type="text" placeholder="" value="{{ session('email') }}">
 										</div>
 									</div>
 								</div>
 								<div class="cs-field-holder">
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 												<div class="row">
 													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 														<label>Name</label>
 													</div>
 													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<select data-placeholder="Name" tabindex="1" class="chosen-select">
-															<option value="Name">Name</option>
-														</select>
+														<input type="text" name="name" id="">
 													</div>
 												</div>
 											</div>
-											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-												<div class="row">
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<label>Date of Birth</label>
-													</div>
-													<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-														<select data-placeholder="Date" tabindex="1" class="chosen-select">
-															<option value="United States">01</option>
-															<option value="United Kingdom">02</option>
-															<option value="Afghanistan">03</option>
-															<option value="Afghanistan">04</option>
-															<option value="Afghanistan">05</option>
-															<option value="Afghanistan">06</option>
-														</select>
-													</div>
-												</div>
-											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -101,13 +83,7 @@
 										<label>Country</label>
 									</div>
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<select data-placeholder="Select Country" tabindex="1" class="chosen-select">
-											<option value="Egypt">Egypt</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="Egypt">Egypt</option>
-                                            <option value="Egypt">Egypt</option>
-																					</select>
+										<input type="text" name="country" id="">
 									</div>
 								</div>
 								<div class="cs-field-holder">
@@ -115,13 +91,7 @@
 										<label>City</label>
 									</div>
 									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<select data-placeholder="Select City" tabindex="1" class="chosen-select">
-											<option value="Giza">Giza</option>
-                                            <option value="Giza">Giza</option>
-                                            <option value="Giza">Giza</option>
-                                            <option value="Giza">Giza</option>
-											
-										</select>
+										<input type="text" name="city" id="">
 									</div>
 								</div>
 								<div class="cs-field-holder">

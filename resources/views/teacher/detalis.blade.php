@@ -14,7 +14,7 @@
 							<div class="cs-profile-pic">
 								<div class="profile-pic">
 									<div class="cs-media">
-										<figure> <img src="assets/extra-images/profile-pic-1.jpg" alt=""/> </figure>
+										<figure> <img src="{{ asset('assets/extra-images/profile-pic-1.jpg') }}" alt=""/> </figure>
 									</div>
 								</div>
 								<div class="cs-browse-holder"> <em>My Profile Photo</em> <span class="file-input btn-file"> Update Avatar
@@ -35,7 +35,7 @@
 							<div class="row">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<div class="cs-section-title">
-										<h2>About Pamela Fryman</h2>
+										<h2>About {{ session('username') }}</h2>
 									</div>
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -46,23 +46,17 @@
                                  <i class="icon-uniF122 cs-color"></i>
                                     <span>
                                      Phone
-                                        <em>(800)-470-865-5060</em>
+                                        <em>{{ session('phone_unmber') }}</em>
                                     </span>
                                 </li>
                                 <li>
                                  <i class="icon-uniF113 cs-color"></i>
                                     <span>
                                      Email
-                                        <a href="#">james@website.com</a>
+                                        <em>{{ session('email') }}</em>
                                     </span>
                                 </li>
-                                <li>
-                                 <i class="icon-uniF10A cs-color"></i>
-                                    <span>
-                                     Specialist in
-                                        <em>Musical Instruments</em>
-                                    </span>
-                                </li>
+                                
                                 <li>
                                  <i class="icon-uniF10A cs-color"></i>
                                     <span>

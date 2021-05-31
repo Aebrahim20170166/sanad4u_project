@@ -1,5 +1,3 @@
-
-
 @extends('layout')
 
 
@@ -15,7 +13,7 @@
 							<div class="cs-profile-pic">
 								<div class="profile-pic">
 									<div class="cs-media">
-										<figure> <img src="assets/extra-images/profile-pic-1.jpg" alt=""/> </figure>
+										<figure> <img src="{{ asset('assets/extra-images/profile-pic-1.jpg') }}" alt=""/> </figure>
 									</div>
 								</div>
 								<div class="cs-browse-holder"> <em>My Profile Photo</em> <span class="file-input btn-file"> Update Avatar
