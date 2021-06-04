@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\userRegistration;
 use App\Http\Controllers\User\validationController;
-use App\Http\Controllers\Student;
+use App\Http\Controllers\Student\StudentController;
 use App\Http\Controllers\Teacher\TeacherController;
 
 /*
@@ -24,6 +24,7 @@ Route::view('success','success')->name('success');
 Route::view('home','welcome')->name('home');
 Route::post('createAccount',[userRegistration::class,'handle_signup'])->name("createAccount");
 Route::post('validate',[validationController::class,'checkLogin_data_and_login'])->name("validate");
+Route::post('update_profile',[StudentController::class,'update_profile'])->name("update_profile");
 
 
 //checkLogin_data_and_login
@@ -38,11 +39,11 @@ Route::get('/logout', function () {
 
 // student
 
- Route::get('/student' , [Student::class , 'index']);
- Route::get('/student/Groups' , [Student::class , 'group']);
- Route::get('/student/Favorites' , [Student::class , 'favorite']);
- Route::get('/student/Setting' , [Student::class , 'setting']);
- Route::get('/student/Statement' , [Student::class , 'statement']);
+Route::get('/student' , [StudentController::class , 'index']);
+Route::get('/student/Groups' , [StudentController::class , 'group']);
+Route::get('/student/Favorites' , [StudentController::class , 'favorite']);
+Route::get('/student/Setting' , [StudentController::class , 'setting']);
+Route::get('/student/Statement' , [StudentController::class , 'statement']);
 
 
 // teacher

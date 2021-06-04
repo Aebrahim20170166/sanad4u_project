@@ -20,8 +20,7 @@ class userRegistration extends Controller
         if(self::save_data($request))
         {
             session(['username' => $request->username]);
-            
-            
+            session(['email' => $request->email]);
             return redirect()->route('home');
             //return redirect()->back()->with(['success'=>'Signed Up Successfully']);
         }

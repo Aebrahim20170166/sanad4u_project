@@ -1,5 +1,5 @@
 <?php
 session_start();
-    echo session('username');
+    echo (session('user'));
     echo session('email');
     echo session('phone_number');
