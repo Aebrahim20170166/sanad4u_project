@@ -51,3 +51,7 @@ Route::get('/student/Statement' , [StudentController::class , 'statement']);
 Route::get('/teacher' , [TeacherController::class , 'index']);
 Route::get('/teacher/settings' , [TeacherController::class , 'settings']);
 Route::get('/teacher/courses' , [TeacherController::class , 'courses']);
+
+// groups
+
+Route::view('groups','groups.all-groups')->name('groups');

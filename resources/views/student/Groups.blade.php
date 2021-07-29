@@ -26,6 +26,7 @@
                                     <li><a href="{{ url('student/Favorites') }}"><i class="icon-heart2 cs-color"></i>Favorites</a></li>
                                     <li><a href="{{ url('student/Statement') }}"><i class="icon-file-text2 cs-color"></i>Statement</a></li>
                                     <li><a href="{{ url('student/Setting') }}"><i class="icon-gear cs-color"></i>Profile Setting</a></li>
+                                    <li><a href="{{ route('groups') }}"><i class="icon-gear cs-color"></i>All Groups</a></li>
                                 </ul>
                                 <a href="#" class="cs-logout"><i class="icon-log-out cs-color"></i>Logout</a> </div>
                         </div>
